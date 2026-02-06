@@ -1,0 +1,23 @@
+services:
+  app:
+    image: httpd:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./html:/usr/local/apache2/htdocs
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    volumes:
+      - kta25dbdata:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  kta25dbdata:

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paketid Martin Kilp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Michroma"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            background: rgb(212, 212, 212);
+            color: #1235fa;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+        }
+
+        .paketid {
+            margin-top: 75px;
+            display: flex;
+            justify-content: center;
+            min-height: 600px;
+        }
+
+        .pakett {
+            min-width: 275px;
+            background: white;
+            margin: 15px;
+            border-radius: 10px;
+            position: relative;
+            padding: 10px;
+            
+            --accent: #1235fa;
+            --accent-hover: #330688;
+            --text: #111;
+            --muted: #5a5a5a;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .pakett .silt {
+            min-width: 150px;
+            background: white;
+            padding: 10px;
+            border-radius: 30px;
+            border: 1px solid #1235fa;
+            position: absolute;
+            text-align: center;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn {
+            display: block;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            background: rgb(0, 0, 255);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .pakett .silt { border-color: var(--accent); }
+        .pakett .btn { background: var(--accent); }
+        .pakett .btn:hover { background: var(--accent-hover); }
+
+
+        /* pakettide teemad/värvid */
+        .pakett.free { --accent:#9b9b9b; --accent-hover:#464646; }
+        .pakett.starter { --accent:#05ad4b; --accent-hover:#00441c; }
+        .pakett.business { --accent:#0022e6; --accent-hover:#000f61; }
+        .pakett.corporate { --accent:#b700cf; --accent-hover:#3d0046; }
+
+
+        .pakett h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .pakett h3 {
+            text-align: center;
+            font-size: 14px;
+            color: rgb(90, 90, 90);
+        }
+
+        .pakett h4 {
+            text-align: center;
+            font-size: 30px;
+            margin-top: -5px;
+            margin-bottom: -5px;
+        }
+
+        .pakett h5 {
+
+            text-align: left;
+            margin-left: 70px;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+        }
+
+
+        .omadused {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* check ikoon ja X ikoon */
+        .omadused li {
+            list-style: none;
+            margin-left: 70px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .omadused li::before {
+            display: inline-block;
+            width: 20px;
+            margin-left: -30px;
+            margin-right: 10px;
+        }
+
+        .omadused .li_ok::before {
+            content: "✔";
+            color: #27ae60;
+        }
+
+        .omadused .li_no::before {
+            content: "✖";
+            color: #e72813;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Paketid</h1>
+        <h1>Martin Kilp</h1>
+
+        <div class="paketid">
+
+
+            <div class="pakett free">
+                <span class="silt">Tasuta</span>
+                <h2>Free</h2>
+                <h3 class="text1">esimene aasta -50%</h3>
+                <h4 class="text2">0 €</h4>
+                <h3 class="text3">norm. 11.80 € + km</h3>
+
+                <ul class="omadused">
+                    <li class="li_ok">6 GB</li>
+                    <li class="li_no">Privaatne postkast</li>
+                    <li class="li_no">Oma IP aadress</li>
+                    <li class="li_no">Oma server</li>
+                </ul>
+
+                <h3 class="text8">Kindel valik kasvaa e-äri püstihoidmiseks, suurem maht veebile ja e-postile ning
+                    rohkem samaaegseid veebikülastajaid.</h3>
+                <a class="btn" href>Telli</a>
+                <h3 class="alatekst1">30-päevane raha tagasi garantii</h3>
+                <h3 class="alatekst2">Kehtib ainult tasulistel pakettidel</h3>
+            </div>
+
+            <div class="pakett starter">
+                <span class="silt">Kõige Soodsam</span>
+                <h2>STARTER</h2>
+                <h3 class="text1">esimene aasta -50%</h3>
+                <h4 class="text2">5,90 €</h4>
+                <h3 class="text3">norm. 11,80 € + km</h3>
+
+                <ul class="omadused">
+                    <li class="li_ok">12 GB</li>
+                    <li class="li_ok">Privaatne postkast</li>
+                    <li class="li_no">Oma IP aadress</li>
+                    <li class="li_no">Oma server</li>
+                </ul>
+
+                <h3 class="text8">Kindel valik kasvaa e-äri püstihoidmiseks, suurem maht veebile ja e-postile ning
+                    rohkem samaaegseid veebikülastajaid.</h3>
+                <a class="btn" href>Telli</a>
+                <h3 class="alatekst1">30-päevane raha tagasi garantii</h3>
+                <h3 class="alatekst2">Kehtib ainult tasulistel pakettidel</h3>
+            </div>
+
+            <div class="pakett business">
+                <span class="silt">Kõige Populaarsem</span>
+                <h2>BUSINESS</h2>
+                <h3 class="text1">esimene aasta -50%</h3>
+                <h4 class="text2">7,90 €</h4>
+                <h3 class="text3">norm. 15.80 € + km</h3>
+
+                <ul class="omadused">
+                    <li class="li_ok">24 GB</li>
+                    <li class="li_ok">Privaatne postkast</li>
+                    <li class="li_ok">Oma IP aadress</li>
+                    <li class="li_no">Oma server</li>
+                </ul>
+
+                <h3 class="text8">Kindel valik kasvaa e-äri püstihoidmiseks, suurem maht veebile ja e-postile ning
+                    rohkem samaaegseid veebikülastajaid.</h3>
+                <a class="btn" href>Telli</a>
+                <h3 class="alatekst1">30-päevane raha tagasi garantii</h3>
+                <h3 class="alatekst2">Kehtib ainult tasulistel pakettidel</h3>
+            </div>
+
+            <div class="pakett corporate">
+                <span class="silt">Täis Pakett</span>
+                <h2>CORPORATE</h2>
+                <h3 class="text1">esimene aasta -50%</h3>
+                <h4 class="text2">9,90 €</h4>
+                <h3 class="text3">norm. 18.80 € + km</h3>
+
+                <ul class="omadused">
+                    <li class="li_ok">48 GB</li>
+                    <li class="li_ok">Privaatne postkast</li>
+                    <li class="li_ok">Oma IP aadress</li>
+                    <li class="li_ok">Oma server</li>
+                </ul>
+
+                <h3 class="text8">Kindel valik kasvaa e-äri püstihoidmiseks, suurem maht veebile ja e-postile ning
+                    rohkem samaaegseid veebikülastajaid.</h3>
+                <a class="btn" href>Telli</a>
+                <h3 class="alatekst1">30-päevane raha tagasi garantii</h3>
+                <h3 class="alatekst2">Kehtib ainult tasulistel pakettidel</h3>
+            </div>
+
+        </div>
+</body>
+
+</html>
