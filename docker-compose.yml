@@ -1,19 +1,22 @@
 services:
   app:
-    image: httpd:latest
+    build: 
+      dockerfile: dockerfile
+      context: .
     ports:
-      - 80:80
+      - 8000:8000
     volumes:
       - ./html:/usr/local/apache2/htdocs
-
   db:
     image: mariadb
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: example
+      MARIADB_DATABASE: app
     volumes:
       - kta25dbdata:/var/lib/mysql
-
+    ports:
+      - 33061:3306
   adminer:
     image: adminer
     restart: always
@@ -21,4 +24,3 @@ services:
       - 8080:8080
 volumes:
   kta25dbdata:
-  
